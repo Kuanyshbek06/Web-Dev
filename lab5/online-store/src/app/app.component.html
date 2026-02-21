@@ -1,0 +1,24 @@
+<section class="page">
+  <header class="top">
+    <h1>Online Store</h1>
+    <p>Select a category to view products</p>
+  </header>
+
+  <nav class="cats">
+    @for (c of categories; track c.id) {
+      <button type="button"
+              (click)="selectCategory(c.id)"
+              [class.active]="selectedCategoryId === c.id">
+        {{ c.name }}
+      </button>
+    }
+  </nav>
+
+  @if (selectedCategoryId === null) {
+    <div class="welcome">Choose a category above 👆</div>
+  } @else {
+    <app-product-list 
+    [products]="products">
+    </app-product-list>
+  }
+</section>

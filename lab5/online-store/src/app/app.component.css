@@ -1,0 +1,46 @@
+.page{ 
+    max-width:1100px; 
+    margin:0 auto; 
+    padding:18px 14px 40px; 
+}
+.top{ 
+    display:grid; 
+    gap:6px; 
+    margin-bottom:12px; 
+}
+.top h1{ 
+    margin:0; 
+    font-size:50px; 
+}
+.top p{ 
+    margin:0; 
+    color:#4b5563; 
+    font-size:30px;
+}
+.cats{
+    display:flex;
+    gap:10px; 
+    flex-wrap:wrap; 
+    margin-bottom:14px; 
+}
+.cats button{ 
+    border:1px solid #e5e7eb; 
+    background:#fff; 
+    padding:10px 12px; 
+    border-radius:12px; 
+    cursor:pointer; 
+    font-size:18px;
+}
+.cats button.active{ 
+    border-color:#111827; 
+    font-weight:800; 
+}
+
+.welcome{ 
+    padding:14px; 
+    border:1px solid #e5e7eb; 
+    border-radius:14px; 
+    background:#fff; 
+    color:#374151; 
+    font-size:25px;
+}
