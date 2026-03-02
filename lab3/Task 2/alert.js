@@ -1,7 +1,7 @@
 const taskInput = document.getElementById('taskInput');
 const addBtn = document.getElementById('addBtn');
 const taskList = document.getElementById('taskList');
-
+const windowButton = document.querySelector("#windowButton");
 // Add new task
 addBtn.addEventListener('click', addTask);
 taskInput.addEventListener('keypress', function(e) {
@@ -15,6 +15,7 @@ function addTask() {
         alert('Please enter a task!');
         return;
     }
+    
     
     // Create list item
     const li = document.createElement('li');
@@ -35,6 +36,7 @@ function addTask() {
     // Add event listeners
     checkbox.addEventListener('change', function() {
         span.classList.toggle('completed', this.checked);
+        span.confirm("Yes")
     });
     
     deleteBtn.addEventListener('click', function() {
@@ -46,6 +48,13 @@ function addTask() {
     li.appendChild(span);
     li.appendChild(deleteBtn);
     
+    windowButton.addEventListener("click", () => {
+   if (window.confirm("Yes")) {
+    taskList.remove()
+  } else {
+    taskList.appendChild(span)
+  }
+ n });
     // Add to list
     taskList.appendChild(li);
     

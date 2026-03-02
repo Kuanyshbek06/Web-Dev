@@ -35,7 +35,7 @@ body {
     border-left: 2px solid lightgray;
     padding: 70px 40px;
     background: white;
-    display: flex;
+     display: flex;
     flex-direction: column;
     justify-content: center;
 }
