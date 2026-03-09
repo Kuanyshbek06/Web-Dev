@@ -1,0 +1,10 @@
+n=int(input())
+
+count=0
+while n>0:
+    x=int(input())
+    if x == 0:
+        count+=1
+    n-=1
+    
+print(count)
